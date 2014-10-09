@@ -13,8 +13,7 @@ stop() ->
 %% behaviour
 %% @private
 start(_StartType, _StartArgs) ->
-    {ok, Pid} = {{NAME}}_sup:start_link(),
-    {ok, Pid}.
+    {{NAME}}_sup:start_link().
 
 %% @private
 stop(_State) ->
