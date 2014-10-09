@@ -11,8 +11,17 @@ start_link() ->
 
 %% behaviour callbacks
 init({}) ->
-    {ok, {{one_for_one, 5, 10},
-          [
-           %% {ChildId, StartFunc, Restart, Shutdown, Type, Modules}.
-          ]}
+    GenServerSpec =
+        {{{NAME}}_server,
+         {{{NAME}}_server, start_link, []},
+         permanent,
+         5000,
+         worker,
+         [{{NAME}}_server]
+        },
+    {ok,
+     {
+       {one_for_one, 5, 10},
+       [GenServerSpec]
+     }
     }.
