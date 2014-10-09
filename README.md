@@ -1,4 +1,4 @@
-supervised-gen-server-gutenberg-generator
-=========================================
+cowboy-gutenberg-generator
+==========================
 
-Supervised gen_server - Gutenberg generator
+Cowboy template for [gutenberg](https://github.com/unbalancedparentheses/gut)
